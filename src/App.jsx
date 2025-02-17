@@ -40,6 +40,13 @@ function App() {
         if(operator === "remove" && strawberryCount === 0) return;
         operator === "add" ? setKiwiCount(kiwiCount + 1) : setKiwiCount(kiwiCount - 1);
     }
+    const resetCounts = () => {
+        setStrawberryCount(0);
+        setBananaCount(0);
+        setAppleCount(0);
+        setKiwiCount(0);
+
+    }
 
 
     return (
@@ -73,6 +80,7 @@ function App() {
                 itemCount={kiwiCount}
                 btnFunction={changeKiwiCount}
             />
+            <button onClick={resetCounts}>Reset</button>
         </>
     )
 }
