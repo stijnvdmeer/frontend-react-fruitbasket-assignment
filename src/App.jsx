@@ -23,7 +23,7 @@ function App() {
     const[kiwiCount, setKiwiCount] = useState(0);
 
     const dropdownOptions = [{text : "iedere week", value : "weekly"}, {text: "om de week", value : "biweekly"}, {text : "iedere maand", value : "monthly"}];
-    const radioButtonOptions = ["Overdag", "in de avond"];
+    const radioButtonOptions = [{text : "Overdag", value : "dag"}, { text : "in de avond", value: "avond"}];
 
     const changeStrawberryCount = (operator) => {
         if(operator === "remove" && strawberryCount === 0) return;

@@ -45,8 +45,8 @@ export default function FormField({fieldName, fieldText, presetValue, inputType,
                 {
                     options.map((option) => (
                         <>
-                            <input type="radio" id={option} name={fieldName} value={option}/>
-                            <h2><label htmlFor={option}>{fieldText}</label></h2>
+                            <input type="radio" id={option} name={fieldName} value={option.value}/>
+                            <h2><label htmlFor={option}>{option.text}</label></h2>
                         </>
                     ))
                 }
