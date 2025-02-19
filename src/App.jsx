@@ -114,6 +114,10 @@ function App() {
                         inputType="radio"
                         options={radioButtonOptions}
                     />
+                    <FormField
+                        fieldName="opmerking"
+                        inputType="textarea"
+                    />
                 </form>
             </div>
         </>
