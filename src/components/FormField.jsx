@@ -43,10 +43,10 @@ export default function FormField({fieldName, presetValue, inputType, options}) 
         return (
             <div className="radioField">
                 {
-                    options.map((option, index) => (
+                    options.map((option) => (
                         <>
-                            <h2><label key={index} htmlFor={option.value}>{option.value}</label></h2>
-                            <input type={inputType} id={fieldName}/>
+                            <input type="radio" id={option} name={fieldName} value={option}/>
+                            <h2><label htmlFor={option}>{option}</label></h2>
                         </>
                     ))
                 }
