@@ -26,7 +26,7 @@ export default function FormField({fieldName, fieldText, presetValue, inputType,
                 <h2><label htmlFor={fieldName}>{fieldText}</label></h2>
                 <select id={fieldName}>
                     {options.map((option, index) => (
-                        <option key={index} value={option}>{option}</option>
+                        <option key={index} value={option.value}>{option.text}</option>
                     ))}
                 </select>
             </div>
