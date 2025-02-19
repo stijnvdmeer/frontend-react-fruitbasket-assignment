@@ -1,0 +1,11 @@
+.form-inner {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 70vw;
+}
+.form-outer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

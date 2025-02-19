@@ -1,0 +1,31 @@
+
+.textField {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.dropdownField {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.radioField {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.textareaField {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.checkboxField {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+input {
+    margin-left: 2vw;
+    margin-bottom: 2vh;
+}
