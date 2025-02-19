@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import '../styles/formfield.css';
 
-export default function FormField({fieldName, presetValue, inputType, options}) {
+export default function FormField({fieldName, fieldText, presetValue, inputType, options}) {
 
     if(inputType === "text") {
         // Text Input Field
         return (
             <div className="textField">
-                <h2><label htmlFor={fieldName}>{fieldName + ":"}</label></h2>
+                <h2><label htmlFor={fieldName}>{fieldText + ":"}</label></h2>
                 <input type={inputType} id={fieldName} value={presetValue} />
             </div>
         )
@@ -15,7 +15,7 @@ export default function FormField({fieldName, presetValue, inputType, options}) 
         // Textarea input field
         return (
             <div className="textareaField">
-                <h2><label htmlFor={fieldName}>{fieldName + ":"}</label></h2>
+                <h2><label htmlFor={fieldName}>{fieldName + ":"}</label>{fieldText}</h2>
                 <textarea id={fieldName} value={presetValue} />
             </div>
         )
@@ -23,7 +23,7 @@ export default function FormField({fieldName, presetValue, inputType, options}) 
         // Dropdown Input Field
         return (
             <div className="dropdownField">
-                <h2><label htmlFor={fieldName}>{fieldName}</label></h2>
+                <h2><label htmlFor={fieldName}>{fieldText}</label></h2>
                 <select id={fieldName}>
                     {options.map((option, index) => (
                         <option key={index} value={option}>{option}</option>
@@ -35,7 +35,7 @@ export default function FormField({fieldName, presetValue, inputType, options}) 
         // Checkbox Input Field
         return (
             <div className="checkboxField">
-                <h2><label htmlFor={fieldName}>{fieldName}</label></h2>
+                <h2><label htmlFor={fieldName}>{fieldText}</label></h2>
                 <input type={inputType} id={fieldName} value={presetValue}/>
             </div>
         )
@@ -46,7 +46,7 @@ export default function FormField({fieldName, presetValue, inputType, options}) 
                     options.map((option) => (
                         <>
                             <input type="radio" id={option} name={fieldName} value={option}/>
-                            <h2><label htmlFor={option}>{option}</label></h2>
+                            <h2><label htmlFor={option}>{fieldText}</label></h2>
                         </>
                     ))
                 }
