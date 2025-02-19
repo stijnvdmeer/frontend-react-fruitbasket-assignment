@@ -22,6 +22,9 @@ function App() {
     const [appleCount, setAppleCount] = useState(0);
     const[kiwiCount, setKiwiCount] = useState(0);
 
+    const dropdownOptions = ["iedere week", "om de week", "iedere maand"];
+    const radioButtonOptions = ["Overdag", "in de avond"];
+
     const changeStrawberryCount = (operator) => {
         if(operator === "remove" && strawberryCount === 0) return;
         operator === "add" ? setStrawberryCount(strawberryCount + 1) : setStrawberryCount(strawberryCount - 1);
@@ -100,6 +103,16 @@ function App() {
                     <FormField
                         fieldName="zipCode"
                         inputType="text"
+                    />
+                    <FormField
+                        fieldName="bezorgfrequentie"
+                        inputType="dropdown"
+                        options={dropdownOptions}
+                    />
+                    <FormField
+                        fieldName="tijdslot"
+                        inputType="radio"
+                        options={radioButtonOptions}
                     />
                 </form>
             </div>
