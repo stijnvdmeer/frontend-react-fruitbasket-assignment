@@ -12,5 +12,6 @@ export default function FruitOverview({imgSrc, imgAlt, text, itemCount, btnFunct
                 <button onClick={() => btnFunction("remove")} value="removeOne">-</button>
             </div>
         </article>
+
     );
 }
