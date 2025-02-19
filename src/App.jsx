@@ -22,7 +22,7 @@ function App() {
     const [appleCount, setAppleCount] = useState(0);
     const[kiwiCount, setKiwiCount] = useState(0);
 
-    const dropdownOptions = ["iedere week", "om de week", "iedere maand"];
+    const dropdownOptions = [{text : "iedere week", value : "weekly"}, {text: "om de week", value : "biweekly"}, {text : "iedere maand", value : "monthly"}];
     const radioButtonOptions = ["Overdag", "in de avond"];
 
     const changeStrawberryCount = (operator) => {
@@ -89,19 +89,23 @@ function App() {
                 <form className="form-inner">
                     <FormField
                         fieldName="firstName"
+                        fieldText="firstName"
                         inputType="text"
                     />
                     <FormField
                         fieldName="lastName"
+                        fieldText="lastName"
                         inputType="text"
                     />
                     <FormField
                         fieldName="age"
+                        fieldText="age"
                         inputType="text"
                         presetValue={0}
                     />
                     <FormField
                         fieldName="zipCode"
+                        fieldText="zipCode"
                         inputType="text"
                     />
                     <FormField
@@ -117,6 +121,11 @@ function App() {
                     <FormField
                         fieldName="opmerking"
                         inputType="textarea"
+                    />
+                    <FormField
+                        fieldName="voorwaarden"
+                        fieldText="ik ga akkoord met de voorwaarden"
+                        inputType="checkbox"
                     />
                 </form>
             </div>
