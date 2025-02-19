@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
 import '../styles/formfield.css';
 
-export default function FormField({fieldName, fieldText, presetValue, inputType, options}) {
+export default function FormField({fieldName, fieldText, presetValue, inputType, options, btnFunction}) {
+
+
 
     if(inputType === "text") {
         // Text Input Field
@@ -51,6 +53,10 @@ export default function FormField({fieldName, fieldText, presetValue, inputType,
                     ))
                 }
             </div>
+        )
+    } else if (inputType === "submit") {
+        return (
+            <input type="submit" id={fieldName} name={fieldName} value={fieldName} onClick={() => btnFunction} />
         )
     }
 

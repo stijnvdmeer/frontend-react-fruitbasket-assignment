@@ -52,6 +52,9 @@ function App() {
 
     }
 
+    function printFormInput() {
+        console.log("Good so far~`");
+    }
 
     return (
         <>
@@ -126,6 +129,12 @@ function App() {
                         fieldName="voorwaarden"
                         fieldText="ik ga akkoord met de voorwaarden"
                         inputType="checkbox"
+                    />
+                    <FormField
+                        fieldName="verzend"
+                        fieldText="verzend"
+                        inputType="submit"
+                        btnFunction={printFormInput}
                     />
                 </form>
             </div>
