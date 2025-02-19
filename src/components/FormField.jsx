@@ -16,7 +16,7 @@ export default function FormField({fieldName, presetValue, inputType, options}) 
         return (
             <div className="textareaField">
                 <h2><label htmlFor={fieldName}>{fieldName + ":"}</label></h2>
-                <input type={inputType} id={fieldName} value={presetValue}/>
+                <textarea id={fieldName} value={presetValue} />
             </div>
         )
     } else if (inputType === "dropdown") {
