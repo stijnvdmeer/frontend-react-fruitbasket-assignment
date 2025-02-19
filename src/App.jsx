@@ -11,6 +11,7 @@ import strawberryIcon from './assets/strawberry.jpg';
 // Component Imports
 import FruitOverview from "./components/FruitOverview.jsx";
 import {useState} from "react";
+import FormField from "./components/FormField.jsx";
 
 
 
@@ -81,6 +82,27 @@ function App() {
                 btnFunction={changeKiwiCount}
             />
             <button onClick={resetCounts}>Reset</button>
+            <div className="form-outer">
+                <form className="form-inner">
+                    <FormField
+                        fieldName="firstName"
+                        inputType="text"
+                    />
+                    <FormField
+                        fieldName="lastName"
+                        inputType="text"
+                    />
+                    <FormField
+                        fieldName="age"
+                        inputType="text"
+                        presetValue={0}
+                    />
+                    <FormField
+                        fieldName="zipCode"
+                        inputType="text"
+                    />
+                </form>
+            </div>
         </>
     )
 }
